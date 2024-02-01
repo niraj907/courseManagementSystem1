@@ -464,11 +464,6 @@ public class StudentPanel extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
-        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jTextField1KeyReleased(evt);
-            }
-        });
 
         btnView.setText("View");
 
@@ -667,6 +662,8 @@ public class StudentPanel extends javax.swing.JFrame {
         // TODO add your handling code here:
           studentDashBoard.setBorderPainted(false); 
         jTabbedPane1.setSelectedIndex(0);
+        
+        
        // studentDashBoard.setBorderPainted(false);
         
     }//GEN-LAST:event_studentDashBoardActionPerformed
@@ -713,15 +710,6 @@ public class StudentPanel extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
-
-        DefaultTableModel ob=(DefaultTableModel) tutorsTable1.getModel();
-       TableRowSorter<DefaultTableModel> obj=new TableRowSorter<>(ob);
-       tutorsTable1.setRowSorter(obj);
-       obj.setRowFilter(RowFilter.regexFilter(jTextField1.getText()));
-        
-    }//GEN-LAST:event_jTextField1KeyReleased
 
     /**
      * @param args the command line arguments
